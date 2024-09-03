@@ -1,53 +1,43 @@
-*/config/development
-*/logs/log-*.php
-!*/logs/index.html
-*/cache/*
-!system/cache/*
-!*/cache/index.html
-!*/cache/.htaccess
+# OS 관련 파일
+.DS_Store
+Thumbs.db
 
-user_guide_src/build/*
-user_guide_src/cilexer/build/*
-user_guide_src/cilexer/dist/*
-user_guide_src/cilexer/pycilexer.egg-info/*
-
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
-/vendor/
-
-
-# .env
+# 환경 설정 파일 (.env)
 .env
-
-# 환경별 설정 파일
 .env.*.php
 
 # Composer의 설치된 의존성 폴더
 /vendor/
 
-# IDE의 설정 파일들
-/.vscode/
+# Composer.lock 파일 (특정 의존성 버전 잠금)
+composer.lock
+
+# Node.js 패키지 관리
+/node_modules/
+
+# 빌드 또는 배포 결과물
+/build/
+dist/
+
+# IDE의 설정 파일들 (IntelliJ, PhpStorm 포함)
 /.idea/
+/.vscode/
 /*.sublime-workspace
 /*.sublime-project
 
+# CodeIgniter 3 Logs
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
 
-# CodeIgniter 캐시와 로그 파일들
+# CodeIgniter 4 Logs, Cache, Sessions
 /writable/cache/
 /writable/logs/
 /writable/session/
 /writable/debugbar/
 /writable/tmp/
-
-# 업로드된 사용자 파일
 /writable/uploads/
-
-# CodeIgniter의 캐시된 뷰 파일들
 /writable/views/
-
-# CI4의 세션 파일
 /writable/sessions/
 
 # Apache 또는 Nginx의 디렉토리 설정 파일들
@@ -57,25 +47,23 @@ application/logs/*
 # 환경 설정 및 배포 설정 파일
 /public/.env
 
-# 데이터베이스 설정 파일 (보안상 중요한 정보 포함)
+# 데이터베이스 설정 파일
 /app/Config/Database.php
 
 # PHPUnit의 테스트 결과
 /.phpunit.result.cache
 
-# node_modules 폴더 (Node.js 패키지 관리)
-/node_modules/
+# 특정 디렉토리 및 파일들
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!system/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
 
-# OS 관련 파일
-.DS_Store
-Thumbs.db
-
-# Composer의 설치된 의존성 폴더
-/vendor/
-
-# Composer.lock 파일 (특정 의존성 버전 잠금)
-/composer.lock
-
-# 빌드 또는 배포 결과물
-/build/
-dist/
+# CodeIgniter User Guide 및 Cilexer 빌드 결과물
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
